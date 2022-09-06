@@ -1,0 +1,964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE10DF372863375C001D8171 /* RequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF362863375C001D8171 /* RequestData.swift */; };
+		CE10DF3928633786001D8171 /* RequestDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF3828633786001D8171 /* RequestDataProtocol.swift */; };
+		CE10DF3C286337D7001D8171 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF3B286337D7001D8171 /* HTTPMethod.swift */; };
+		CE10DF3E2863381C001D8171 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF3D2863381C001D8171 /* JSON.swift */; };
+		CE10DF43286338F7001D8171 /* GetVenuesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF42286338F7001D8171 /* GetVenuesRequest.swift */; };
+		CE10DF4528633924001D8171 /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF4428633924001D8171 /* PathBuilder.swift */; };
+		CE10DF4728633941001D8171 /* NearbyVenuesAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF4628633941001D8171 /* NearbyVenuesAPIRequest.swift */; };
+		CE10DF49286339B0001D8171 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF48286339B0001D8171 /* NetworkDispatcher.swift */; };
+		CE10DF4B28633A35001D8171 /* NearbyVenuesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF4A28633A35001D8171 /* NearbyVenuesError.swift */; };
+		CE10DF4D28633A9A001D8171 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF4C28633A9A001D8171 /* HTTPStatusCode.swift */; };
+		CE10DF4F2863421C001D8171 /* URLSessionNetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF4E2863421C001D8171 /* URLSessionNetworkDispatcher.swift */; };
+		CE10DF5128634264001D8171 /* RequestSigner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5028634264001D8171 /* RequestSigner.swift */; };
+		CE10DF5328634612001D8171 /* VenuesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5228634612001D8171 /* VenuesService.swift */; };
+		CE10DF5728634E19001D8171 /* VenuesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5628634E19001D8171 /* VenuesRepository.swift */; };
+		CE10DF5A28634E6B001D8171 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5928634E6B001D8171 /* Venue.swift */; };
+		CE10DF5C28634F81001D8171 /* VenuesRemoteSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5B28634F80001D8171 /* VenuesRemoteSource.swift */; };
+		CE10DF6028635B12001D8171 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF5F28635B12001D8171 /* Color.swift */; };
+		CE10DF6228635C0C001D8171 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6128635C0C001D8171 /* VenueTableViewCell.swift */; };
+		CE10DF6428635F0E001D8171 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6328635F0E001D8171 /* UIView+Constraints.swift */; };
+		CE10DF6628635F93001D8171 /* AnnchoredConstrained.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6528635F93001D8171 /* AnnchoredConstrained.swift */; };
+		CE10DF69286363F4001D8171 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF68286363F4001D8171 /* EmptyStateView.swift */; };
+		CE10DF6B2863642C001D8171 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6A2863642C001D8171 /* CapsuleButton.swift */; };
+		CE10DF6E286364BE001D8171 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6D286364BE001D8171 /* Optional.swift */; };
+		CE10DF70286364DC001D8171 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF6F286364DC001D8171 /* Collection.swift */; };
+		CE10DF72286365BE001D8171 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF71286365BE001D8171 /* UIColor.swift */; };
+		CE10DF74286366EB001D8171 /* NSLayoutConstraint+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF73286366EB001D8171 /* NSLayoutConstraint+Priority.swift */; };
+		CE10DF7B286372C1001D8171 /* UserLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF7A286372C1001D8171 /* UserLocationService.swift */; };
+		CE10DF7F28638537001D8171 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE10DF7E28638537001D8171 /* Location.swift */; };
+		CEA8BEC82865E2E100E6A919 /* VenuesLocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BEC72865E2E100E6A919 /* VenuesLocalSource.swift */; };
+		CEA8BECA2865E38600E6A919 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BEC92865E38600E6A919 /* Reachability.swift */; };
+		CEA8BF012869B35600E6A919 /* CodingKey+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8BF002869B35600E6A919 /* CodingKey+Context.swift */; };
+		CEFE32412862186B00C919BD /* NearbyVenues.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEFE323F2862186B00C919BD /* NearbyVenues.xcdatamodeld */; };
+		CEFE32432862186C00C919BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFE32422862186C00C919BD /* Assets.xcassets */; };
+		CEFE32462862186C00C919BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFE32442862186C00C919BD /* LaunchScreen.storyboard */; };
+		CEFE32512862186D00C919BD /* NearbyVenuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE32502862186D00C919BD /* NearbyVenuesTests.swift */; };
+		CEFE325B2862186D00C919BD /* NearbyVenuesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE325A2862186D00C919BD /* NearbyVenuesUITests.swift */; };
+		CEFE325D2862186D00C919BD /* NearbyVenuesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE325C2862186D00C919BD /* NearbyVenuesUITestsLaunchTests.swift */; };
+		CEFE3282286218BB00C919BD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE326E286218BB00C919BD /* AboutViewController.swift */; };
+		CEFE3283286218BB00C919BD /* VenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3270286218BB00C919BD /* VenuesViewController.swift */; };
+		CEFE3284286218BB00C919BD /* VenuesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3271286218BB00C919BD /* VenuesViewModel.swift */; };
+		CEFE3285286218BB00C919BD /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3272286218BB00C919BD /* HomeCoordinator.swift */; };
+		CEFE3286286218BB00C919BD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3273286218BB00C919BD /* AppCoordinator.swift */; };
+		CEFE3287286218BB00C919BD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3276286218BB00C919BD /* Constants.swift */; };
+		CEFE3288286218BB00C919BD /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3277286218BB00C919BD /* TypeAlias.swift */; };
+		CEFE3289286218BB00C919BD /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3278286218BB00C919BD /* Injector.swift */; };
+		CEFE328A286218BB00C919BD /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3279286218BB00C919BD /* Localizable.swift */; };
+		CEFE328B286218BB00C919BD /* UIViewController+UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE327C286218BB00C919BD /* UIViewController+UIAlertController.swift */; };
+		CEFE328C286218BB00C919BD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE327E286218BB00C919BD /* Coordinator.swift */; };
+		CEFE328D286218BB00C919BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE327F286218BB00C919BD /* SceneDelegate.swift */; };
+		CEFE328E286218BB00C919BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3280286218BB00C919BD /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEFE324D2862186D00C919BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFE322B2862186B00C919BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFE32322862186B00C919BD;
+			remoteInfo = NearbyVenues;
+		};
+		CEFE32572862186D00C919BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFE322B2862186B00C919BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFE32322862186B00C919BD;
+			remoteInfo = NearbyVenues;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE10DF362863375C001D8171 /* RequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestData.swift; sourceTree = "<group>"; };
+		CE10DF3828633786001D8171 /* RequestDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDataProtocol.swift; sourceTree = "<group>"; };
+		CE10DF3B286337D7001D8171 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CE10DF3D2863381C001D8171 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		CE10DF42286338F7001D8171 /* GetVenuesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVenuesRequest.swift; sourceTree = "<group>"; };
+		CE10DF4428633924001D8171 /* PathBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
+		CE10DF4628633941001D8171 /* NearbyVenuesAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyVenuesAPIRequest.swift; sourceTree = "<group>"; };
+		CE10DF48286339B0001D8171 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		CE10DF4A28633A35001D8171 /* NearbyVenuesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyVenuesError.swift; sourceTree = "<group>"; };
+		CE10DF4C28633A9A001D8171 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		CE10DF4E2863421C001D8171 /* URLSessionNetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionNetworkDispatcher.swift; sourceTree = "<group>"; };
+		CE10DF5028634264001D8171 /* RequestSigner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSigner.swift; sourceTree = "<group>"; };
+		CE10DF5228634612001D8171 /* VenuesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesService.swift; sourceTree = "<group>"; };
+		CE10DF5628634E19001D8171 /* VenuesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRepository.swift; sourceTree = "<group>"; };
+		CE10DF5928634E6B001D8171 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		CE10DF5B28634F80001D8171 /* VenuesRemoteSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesRemoteSource.swift; sourceTree = "<group>"; };
+		CE10DF5F28635B12001D8171 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		CE10DF6128635C0C001D8171 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		CE10DF6328635F0E001D8171 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		CE10DF6528635F93001D8171 /* AnnchoredConstrained.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnchoredConstrained.swift; sourceTree = "<group>"; };
+		CE10DF68286363F4001D8171 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		CE10DF6A2863642C001D8171 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
+		CE10DF6D286364BE001D8171 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		CE10DF6F286364DC001D8171 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		CE10DF71286365BE001D8171 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		CE10DF73286366EB001D8171 /* NSLayoutConstraint+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Priority.swift"; sourceTree = "<group>"; };
+		CE10DF7A286372C1001D8171 /* UserLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationService.swift; sourceTree = "<group>"; };
+		CE10DF7E28638537001D8171 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CEA8BEC72865E2E100E6A919 /* VenuesLocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesLocalSource.swift; sourceTree = "<group>"; };
+		CEA8BEC92865E38600E6A919 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CEA8BF002869B35600E6A919 /* CodingKey+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingKey+Context.swift"; sourceTree = "<group>"; };
+		CEFE32332862186B00C919BD /* NearbyVenues.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyVenues.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFE32402862186B00C919BD /* NearbyVenues.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NearbyVenues.xcdatamodel; sourceTree = "<group>"; };
+		CEFE32422862186C00C919BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEFE32452862186C00C919BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEFE32472862186C00C919BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFE324C2862186D00C919BD /* NearbyVenuesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearbyVenuesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFE32502862186D00C919BD /* NearbyVenuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyVenuesTests.swift; sourceTree = "<group>"; };
+		CEFE32562862186D00C919BD /* NearbyVenuesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NearbyVenuesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFE325A2862186D00C919BD /* NearbyVenuesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyVenuesUITests.swift; sourceTree = "<group>"; };
+		CEFE325C2862186D00C919BD /* NearbyVenuesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyVenuesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEFE326E286218BB00C919BD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CEFE3270286218BB00C919BD /* VenuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewController.swift; sourceTree = "<group>"; };
+		CEFE3271286218BB00C919BD /* VenuesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuesViewModel.swift; sourceTree = "<group>"; };
+		CEFE3272286218BB00C919BD /* HomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CEFE3273286218BB00C919BD /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CEFE3276286218BB00C919BD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEFE3277286218BB00C919BD /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		CEFE3278286218BB00C919BD /* Injector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
+		CEFE3279286218BB00C919BD /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		CEFE327C286218BB00C919BD /* UIViewController+UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+UIAlertController.swift"; sourceTree = "<group>"; };
+		CEFE327E286218BB00C919BD /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CEFE327F286218BB00C919BD /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CEFE3280286218BB00C919BD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEFE32302862186B00C919BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE32492862186D00C919BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE32532862186D00C919BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE10DF3528633742001D8171 /* RequestData */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF362863375C001D8171 /* RequestData.swift */,
+				CE10DF3828633786001D8171 /* RequestDataProtocol.swift */,
+			);
+			path = RequestData;
+			sourceTree = "<group>";
+		};
+		CE10DF3A286337C6001D8171 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF3528633742001D8171 /* RequestData */,
+				CE10DF3B286337D7001D8171 /* HTTPMethod.swift */,
+				CE10DF4C28633A9A001D8171 /* HTTPStatusCode.swift */,
+				CE10DF48286339B0001D8171 /* NetworkDispatcher.swift */,
+				CE10DF5028634264001D8171 /* RequestSigner.swift */,
+				CE10DF4E2863421C001D8171 /* URLSessionNetworkDispatcher.swift */,
+				CEA8BEC92865E38600E6A919 /* Reachability.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE10DF3F286338B9001D8171 /* NearbyVenues */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF4428633924001D8171 /* PathBuilder.swift */,
+				CE10DF4628633941001D8171 /* NearbyVenuesAPIRequest.swift */,
+				CE10DF40286338D0001D8171 /* Venues */,
+			);
+			path = NearbyVenues;
+			sourceTree = "<group>";
+		};
+		CE10DF40286338D0001D8171 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF41286338D7001D8171 /* Requests */,
+				CE10DF5228634612001D8171 /* VenuesService.swift */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		CE10DF41286338D7001D8171 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF42286338F7001D8171 /* GetVenuesRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		CE10DF5428634DF6001D8171 /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF5828634E5D001D8171 /* Venue */,
+				CE10DF5528634DFC001D8171 /* Repository */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		CE10DF5528634DFC001D8171 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF5628634E19001D8171 /* VenuesRepository.swift */,
+				CE10DF5B28634F80001D8171 /* VenuesRemoteSource.swift */,
+				CEA8BEC72865E2E100E6A919 /* VenuesLocalSource.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CE10DF5828634E5D001D8171 /* Venue */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF5928634E6B001D8171 /* Venue.swift */,
+				CE10DF7E28638537001D8171 /* Location.swift */,
+			);
+			path = Venue;
+			sourceTree = "<group>";
+		};
+		CE10DF67286363E0001D8171 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF68286363F4001D8171 /* EmptyStateView.swift */,
+				CE10DF6A2863642C001D8171 /* CapsuleButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE10DF6C286364B1001D8171 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF6D286364BE001D8171 /* Optional.swift */,
+				CE10DF6F286364DC001D8171 /* Collection.swift */,
+				CEA8BF002869B35600E6A919 /* CodingKey+Context.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		CE10DF7928637285001D8171 /* UserLocationService */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF7A286372C1001D8171 /* UserLocationService.swift */,
+			);
+			path = UserLocationService;
+			sourceTree = "<group>";
+		};
+		CEA8BF022869BF1200E6A919 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE326A286218AE00C919BD /* APP */,
+				CEFE32692862189E00C919BD /* API */,
+				CEFE328F286218E500C919BD /* DATA */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		CEA8BF032869BF2900E6A919 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE32442862186C00C919BD /* LaunchScreen.storyboard */,
+				CEFE32422862186C00C919BD /* Assets.xcassets */,
+				CEFE323F2862186B00C919BD /* NearbyVenues.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CEFE322A2862186B00C919BD = {
+			isa = PBXGroup;
+			children = (
+				CEFE32352862186B00C919BD /* NearbyVenues */,
+				CEFE324F2862186D00C919BD /* NearbyVenuesTests */,
+				CEFE32592862186D00C919BD /* NearbyVenuesUITests */,
+				CEFE32342862186B00C919BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEFE32342862186B00C919BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE32332862186B00C919BD /* NearbyVenues.app */,
+				CEFE324C2862186D00C919BD /* NearbyVenuesTests.xctest */,
+				CEFE32562862186D00C919BD /* NearbyVenuesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEFE32352862186B00C919BD /* NearbyVenues */ = {
+			isa = PBXGroup;
+			children = (
+				CEA8BF022869BF1200E6A919 /* Source */,
+				CEA8BF032869BF2900E6A919 /* Resources */,
+				CEFE32472862186C00C919BD /* Info.plist */,
+			);
+			path = NearbyVenues;
+			sourceTree = "<group>";
+		};
+		CEFE324F2862186D00C919BD /* NearbyVenuesTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE32502862186D00C919BD /* NearbyVenuesTests.swift */,
+			);
+			path = NearbyVenuesTests;
+			sourceTree = "<group>";
+		};
+		CEFE32592862186D00C919BD /* NearbyVenuesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE325A2862186D00C919BD /* NearbyVenuesUITests.swift */,
+				CEFE325C2862186D00C919BD /* NearbyVenuesUITestsLaunchTests.swift */,
+			);
+			path = NearbyVenuesUITests;
+			sourceTree = "<group>";
+		};
+		CEFE32692862189E00C919BD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF3A286337C6001D8171 /* Common */,
+				CE10DF3F286338B9001D8171 /* NearbyVenues */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CEFE326A286218AE00C919BD /* APP */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE3274286218BB00C919BD /* Common */,
+				CEFE326B286218BB00C919BD /* Home */,
+				CEFE3273286218BB00C919BD /* AppCoordinator.swift */,
+				CEFE3280286218BB00C919BD /* AppDelegate.swift */,
+				CEFE327F286218BB00C919BD /* SceneDelegate.swift */,
+			);
+			path = APP;
+			sourceTree = "<group>";
+		};
+		CEFE326B286218BB00C919BD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE326C286218BB00C919BD /* About */,
+				CEFE326F286218BB00C919BD /* Venues */,
+				CEFE3272286218BB00C919BD /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CEFE326C286218BB00C919BD /* About */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE326E286218BB00C919BD /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		CEFE326F286218BB00C919BD /* Venues */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE3270286218BB00C919BD /* VenuesViewController.swift */,
+				CEFE3271286218BB00C919BD /* VenuesViewModel.swift */,
+				CE10DF6128635C0C001D8171 /* VenueTableViewCell.swift */,
+			);
+			path = Venues;
+			sourceTree = "<group>";
+		};
+		CEFE3274286218BB00C919BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF67286363E0001D8171 /* Views */,
+				CEFE3275286218BB00C919BD /* Utils */,
+				CEFE327A286218BB00C919BD /* Extensions */,
+				CEFE327D286218BB00C919BD /* Protocols */,
+				CE10DF4A28633A35001D8171 /* NearbyVenuesError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CEFE3275286218BB00C919BD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE3276286218BB00C919BD /* Constants.swift */,
+				CEFE3277286218BB00C919BD /* TypeAlias.swift */,
+				CEFE3278286218BB00C919BD /* Injector.swift */,
+				CEFE3279286218BB00C919BD /* Localizable.swift */,
+				CE10DF3D2863381C001D8171 /* JSON.swift */,
+				CE10DF5F28635B12001D8171 /* Color.swift */,
+				CE10DF6528635F93001D8171 /* AnnchoredConstrained.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CEFE327A286218BB00C919BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF6C286364B1001D8171 /* Foundation */,
+				CEFE327B286218BB00C919BD /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEFE327B286218BB00C919BD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE327C286218BB00C919BD /* UIViewController+UIAlertController.swift */,
+				CE10DF6328635F0E001D8171 /* UIView+Constraints.swift */,
+				CE10DF73286366EB001D8171 /* NSLayoutConstraint+Priority.swift */,
+				CE10DF71286365BE001D8171 /* UIColor.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CEFE327D286218BB00C919BD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CEFE327E286218BB00C919BD /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CEFE328F286218E500C919BD /* DATA */ = {
+			isa = PBXGroup;
+			children = (
+				CE10DF7928637285001D8171 /* UserLocationService */,
+				CE10DF5428634DF6001D8171 /* Venues */,
+			);
+			path = DATA;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEFE32322862186B00C919BD /* NearbyVenues */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFE32602862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenues" */;
+			buildPhases = (
+				CEFE322F2862186B00C919BD /* Sources */,
+				CEFE32302862186B00C919BD /* Frameworks */,
+				CEFE32312862186B00C919BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NearbyVenues;
+			productName = NearbyVenues;
+			productReference = CEFE32332862186B00C919BD /* NearbyVenues.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEFE324B2862186D00C919BD /* NearbyVenuesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFE32632862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenuesTests" */;
+			buildPhases = (
+				CEFE32482862186D00C919BD /* Sources */,
+				CEFE32492862186D00C919BD /* Frameworks */,
+				CEFE324A2862186D00C919BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFE324E2862186D00C919BD /* PBXTargetDependency */,
+			);
+			name = NearbyVenuesTests;
+			productName = NearbyVenuesTests;
+			productReference = CEFE324C2862186D00C919BD /* NearbyVenuesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEFE32552862186D00C919BD /* NearbyVenuesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFE32662862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenuesUITests" */;
+			buildPhases = (
+				CEFE32522862186D00C919BD /* Sources */,
+				CEFE32532862186D00C919BD /* Frameworks */,
+				CEFE32542862186D00C919BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFE32582862186D00C919BD /* PBXTargetDependency */,
+			);
+			name = NearbyVenuesUITests;
+			productName = NearbyVenuesUITests;
+			productReference = CEFE32562862186D00C919BD /* NearbyVenuesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEFE322B2862186B00C919BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					CEFE32322862186B00C919BD = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					CEFE324B2862186D00C919BD = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CEFE32322862186B00C919BD;
+					};
+					CEFE32552862186D00C919BD = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CEFE32322862186B00C919BD;
+					};
+				};
+			};
+			buildConfigurationList = CEFE322E2862186B00C919BD /* Build configuration list for PBXProject "NearbyVenues" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEFE322A2862186B00C919BD;
+			productRefGroup = CEFE32342862186B00C919BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEFE32322862186B00C919BD /* NearbyVenues */,
+				CEFE324B2862186D00C919BD /* NearbyVenuesTests */,
+				CEFE32552862186D00C919BD /* NearbyVenuesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEFE32312862186B00C919BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFE32462862186C00C919BD /* LaunchScreen.storyboard in Resources */,
+				CEFE32432862186C00C919BD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE324A2862186D00C919BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE32542862186D00C919BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEFE322F2862186B00C919BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE10DF4D28633A9A001D8171 /* HTTPStatusCode.swift in Sources */,
+				CE10DF5A28634E6B001D8171 /* Venue.swift in Sources */,
+				CE10DF6028635B12001D8171 /* Color.swift in Sources */,
+				CEFE32412862186B00C919BD /* NearbyVenues.xcdatamodeld in Sources */,
+				CE10DF69286363F4001D8171 /* EmptyStateView.swift in Sources */,
+				CE10DF5C28634F81001D8171 /* VenuesRemoteSource.swift in Sources */,
+				CE10DF6628635F93001D8171 /* AnnchoredConstrained.swift in Sources */,
+				CE10DF49286339B0001D8171 /* NetworkDispatcher.swift in Sources */,
+				CEFE328C286218BB00C919BD /* Coordinator.swift in Sources */,
+				CE10DF5328634612001D8171 /* VenuesService.swift in Sources */,
+				CEFE3282286218BB00C919BD /* AboutViewController.swift in Sources */,
+				CE10DF43286338F7001D8171 /* GetVenuesRequest.swift in Sources */,
+				CE10DF74286366EB001D8171 /* NSLayoutConstraint+Priority.swift in Sources */,
+				CE10DF5128634264001D8171 /* RequestSigner.swift in Sources */,
+				CEFE3283286218BB00C919BD /* VenuesViewController.swift in Sources */,
+				CEFE328B286218BB00C919BD /* UIViewController+UIAlertController.swift in Sources */,
+				CEFE328D286218BB00C919BD /* SceneDelegate.swift in Sources */,
+				CEFE3287286218BB00C919BD /* Constants.swift in Sources */,
+				CE10DF3E2863381C001D8171 /* JSON.swift in Sources */,
+				CE10DF6428635F0E001D8171 /* UIView+Constraints.swift in Sources */,
+				CEA8BEC82865E2E100E6A919 /* VenuesLocalSource.swift in Sources */,
+				CE10DF6228635C0C001D8171 /* VenueTableViewCell.swift in Sources */,
+				CE10DF6B2863642C001D8171 /* CapsuleButton.swift in Sources */,
+				CEA8BECA2865E38600E6A919 /* Reachability.swift in Sources */,
+				CEFE3285286218BB00C919BD /* HomeCoordinator.swift in Sources */,
+				CEFE3289286218BB00C919BD /* Injector.swift in Sources */,
+				CE10DF3928633786001D8171 /* RequestDataProtocol.swift in Sources */,
+				CE10DF5728634E19001D8171 /* VenuesRepository.swift in Sources */,
+				CE10DF7F28638537001D8171 /* Location.swift in Sources */,
+				CEA8BF012869B35600E6A919 /* CodingKey+Context.swift in Sources */,
+				CEFE3286286218BB00C919BD /* AppCoordinator.swift in Sources */,
+				CEFE3284286218BB00C919BD /* VenuesViewModel.swift in Sources */,
+				CE10DF72286365BE001D8171 /* UIColor.swift in Sources */,
+				CE10DF6E286364BE001D8171 /* Optional.swift in Sources */,
+				CE10DF4528633924001D8171 /* PathBuilder.swift in Sources */,
+				CE10DF70286364DC001D8171 /* Collection.swift in Sources */,
+				CEFE3288286218BB00C919BD /* TypeAlias.swift in Sources */,
+				CE10DF4728633941001D8171 /* NearbyVenuesAPIRequest.swift in Sources */,
+				CE10DF4F2863421C001D8171 /* URLSessionNetworkDispatcher.swift in Sources */,
+				CE10DF4B28633A35001D8171 /* NearbyVenuesError.swift in Sources */,
+				CE10DF3C286337D7001D8171 /* HTTPMethod.swift in Sources */,
+				CEFE328A286218BB00C919BD /* Localizable.swift in Sources */,
+				CE10DF7B286372C1001D8171 /* UserLocationService.swift in Sources */,
+				CEFE328E286218BB00C919BD /* AppDelegate.swift in Sources */,
+				CE10DF372863375C001D8171 /* RequestData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE32482862186D00C919BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFE32512862186D00C919BD /* NearbyVenuesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFE32522862186D00C919BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFE325B2862186D00C919BD /* NearbyVenuesUITests.swift in Sources */,
+				CEFE325D2862186D00C919BD /* NearbyVenuesUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEFE324E2862186D00C919BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFE32322862186B00C919BD /* NearbyVenues */;
+			targetProxy = CEFE324D2862186D00C919BD /* PBXContainerItemProxy */;
+		};
+		CEFE32582862186D00C919BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFE32322862186B00C919BD /* NearbyVenues */;
+			targetProxy = CEFE32572862186D00C919BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CEFE32442862186C00C919BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEFE32452862186C00C919BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEFE325E2862186D00C919BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEFE325F2862186D00C919BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEFE32612862186D00C919BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearbyVenues/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearbyVenues uses your location to find nearby venues.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenues;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEFE32622862186D00C919BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NearbyVenues/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "NearbyVenues uses your location to find nearby venues.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenues;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEFE32642862186D00C919BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenuesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearbyVenues.app/NearbyVenues";
+			};
+			name = Debug;
+		};
+		CEFE32652862186D00C919BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenuesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NearbyVenues.app/NearbyVenues";
+			};
+			name = Release;
+		};
+		CEFE32672862186D00C919BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenuesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NearbyVenues;
+			};
+			name = Debug;
+		};
+		CEFE32682862186D00C919BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dume.enea.NearbyVenuesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NearbyVenues;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEFE322E2862186B00C919BD /* Build configuration list for PBXProject "NearbyVenues" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFE325E2862186D00C919BD /* Debug */,
+				CEFE325F2862186D00C919BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFE32602862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenues" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFE32612862186D00C919BD /* Debug */,
+				CEFE32622862186D00C919BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFE32632862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenuesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFE32642862186D00C919BD /* Debug */,
+				CEFE32652862186D00C919BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFE32662862186D00C919BD /* Build configuration list for PBXNativeTarget "NearbyVenuesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFE32672862186D00C919BD /* Debug */,
+				CEFE32682862186D00C919BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CEFE323F2862186B00C919BD /* NearbyVenues.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEFE32402862186B00C919BD /* NearbyVenues.xcdatamodel */,
+			);
+			currentVersion = CEFE32402862186B00C919BD /* NearbyVenues.xcdatamodel */;
+			path = NearbyVenues.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CEFE322B2862186B00C919BD /* Project object */;
+}
